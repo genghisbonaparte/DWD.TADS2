@@ -1,7 +1,7 @@
 EMENTA
 
-jAVASCRIPT, dom, Bibliotecas de comportamentos FrontEnd
-(*). Usabilidade. Identidade Visual. Designg / 
+Javascript, DOM, Bibliotecas de comportamentos FrontEnd
+(*). Usabilidade. Identidade Visual. Design / 
 Porgramação Dinamica. Validações.
 
 Avaliações:
@@ -63,7 +63,10 @@ Javascritpt (script - interpretadas)
     -
     
     ##Operadores Relacionais 
-    == igual a
+    == equalização
+    && inclusão
+    || concessão
+    ! negação
 
     # Exercicios aula 1
     1. Criar um programa ler uma variavel e imprimir o seu valor
