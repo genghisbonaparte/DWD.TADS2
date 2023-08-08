@@ -1,0 +1,36 @@
+<!-- se faz parte do escopo de class  e manipula objetos e atributos, é um método -->
+<!-- se não faz parte do escopo e nãp manipula objetos e atributos, é uma função, todo método é uma função, mas nem todo métdo é uma função -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 2</title>
+  </head>
+  <body>
+    <h1>Resultado</h1>
+    <button onclick="sub()">Ver resultado!</button>
+
+    <script>
+      //----------------------------------------
+      function somaDiferentes(a, b) {
+        if (a === b) {
+          document.write("Número iguais ");
+          return "n pode";
+        }
+        document.write("Números diferentes! ");
+        return a + b;
+      }
+      //----------------------------------------
+      function sub() {
+        let r = somaDiferentes(2, 3); // dinamic
+        document.write(r);
+      }
+      //----------------------------------------
+      function areaTriangulo(b, h) {
+        return (b * h) / 2;
+      }
+    </script>
+  </body>
+</html>
