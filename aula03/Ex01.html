@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex01-Lista01</title>
+  </head>
+  <body>
+    <h1>Média Aritmética</h1>
+    <h3 id="result"></h3>
+
+    <script>
+      let n1 = Number(window.prompt(`digite o primeiro numero`));
+      let n2 = Number(window.prompt(`digite o segundo numero`));
+      let n3 = Number(window.prompt(`digite o terceiro numero`));
+
+      let med = (n1 + n2 + n3) / 3;
+
+      let res = document.getElementById("result");
+
+      res.innerHTML = `<p>A média aritmética é ${med}</p>`;
+    </script>
+  </body>
+</html>
+
+<!-- feito -->

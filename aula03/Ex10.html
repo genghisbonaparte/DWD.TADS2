@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex10-Lista01</title>
+  </head>
+  <body>
+    <h1>Categoria de natação</h1>
+
+    <script>
+      let a = Number(window.prompt(`Insira sua idade`));
+
+      if (a >= 50) {
+        document.write("Senior");
+      } else {
+        if (a >= 18) {
+          document.write("Adulto");
+        } else {
+          if (a >= 14) {
+            document.write("Juvenil");
+          } else {
+            if (a >= 9) {
+              document.write("ifantil");
+            } else {
+              document.write("mirim");
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

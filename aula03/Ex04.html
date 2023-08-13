@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex04-Lista01</title>
+  </head>
+  <body>
+    <h1>Cálculo de prestações</h1>
+    <h3 id="result"></h3>
+
+    <script>
+      var valor1 = Number(window.prompt(`Digite o valor de seu produto:`));
+      var parc = Number(
+        window.prompt(`Digite o numero de parcelas (Entre 3, 5 ou 10 parcelas)`)
+      );
+      let res = document.getElementById("result");
+
+      if (parc !== 3 && parc !== 5 && parc !== 10) {
+        res.innerHTML = `<p>Número de parcelas inválido, tente novamente</p>`;
+      } else {
+        if (parc == 3) {
+          var valor2 = valor1 + valor1 * 0.1;
+
+          res.innerHTML = `<p>O valor total a prazo de 3 parcelas será ${valor2}</p>`;
+        } else {
+          if (parc == 5) {
+            var valor3 = valor1 + valor1 * 0.2;
+
+            res.innerHTML = `<p>O valor total a prazo de 5 parcelas será ${valor3}</p>`;
+          } else {
+            if (parc == 10) {
+              var valor4 = valor1 + valor1 * 0.35;
+
+              res.innerHTML = `<p>O valor total a prazo de 10 parcelas será ${valor4}</p>`;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- feito -->

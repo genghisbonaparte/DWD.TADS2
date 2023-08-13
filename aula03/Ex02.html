@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex02-Lista-01</title>
+  </head>
+  <body>
+    <h1>Info de Reajuste</h1>
+    <h3 id="name"></h3>
+    <h3 id="result"></h3>
+
+    <script>
+      let nome = window.prompt(`Escreva seu nome`);
+      let valor1 = Number(window.prompt(`Escreva seu salário atual`));
+
+      let valor2 = valor1 + valor1 * 0.1;
+
+      let nick = document.getElementById("name");
+
+      let res = document.getElementById("result");
+
+      nick.innerHTML = `<p>Olá ${nome}</p>`;
+      res.innerHTML = `<p>O novo salario e ${valor2} reais</p>`;
+    </script>
+  </body>
+</html>
+
+<!-- feito -->

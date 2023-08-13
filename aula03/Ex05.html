@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex05-Lista01</title>
+  </head>
+  <body>
+    <h1>Parcial da disciplina</h1>
+
+    <h3 id="result"></h3>
+
+    <footer id="nick"></footer>
+
+    <script>
+      var name = window.prompt(`Digite o seu nome`);
+      var grade = Number(window.prompt(`Digite o número do seu período`));
+      var nota1 = Number(window.prompt(`Digite a primeira nota`));
+      var nota2 = Number(window.prompt(`Digite a segunda nota`));
+      var nota3 = Number(window.prompt(`Digite a terceira nota`));
+
+      let media = (nota1 + nota2 + nota3) / 3;
+
+      let result = document.getElementById(`result`);
+      let nick = document.getElementById(`nick`);
+
+      nick.innerHTML = `<p>Estudante ${name} - ${grade}° Período</p>`;
+
+      if (media >= 8) {
+        result.innerHTML = `<p>Parabéns!!! Voce passou! <span> Com ${media} pontos!</p>`;
+      } else {
+        result.innerHTML = `<p>Não foi dessa vez!</p>`;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- feito -->

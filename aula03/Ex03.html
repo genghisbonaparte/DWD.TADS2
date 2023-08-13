@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex03-Lista01</title>
+  </head>
+  <body>
+    <h1>Descubra a variável C</h1>
+
+    <h3 id="result"></h3>
+    <script>
+      let A = Number(window.prompt(`digite o primeiro numero`));
+      let B = Number(window.prompt(`digite o segundo numero`));
+
+      if (A == B) {
+        let C = A + B;
+
+        let res = document.getElementById("result");
+
+        res.innerHTML = `<p>Numeros iguais, logo C é ${C}</p>`;
+      } else {
+        let C = A * B;
+
+        let res = document.getElementById("result");
+
+        res.innerHTML = `<p>Numeros diferentes, logo C é ${C}</p>`;
+      }
+    </script>
+  </body>
+</html>

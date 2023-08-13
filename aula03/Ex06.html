@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex6-Lista01</title>
+  </head>
+  <body>
+    <h1>Testando funções</h1>
+
+    <h3 id="result"></h3>
+
+    <script>
+      var cod = Number(window.prompt(`Insira um número entre 1, 2 ou 3.`));
+      let res = document.getElementById(`result`);
+
+      if (cod == 1) {
+        let a = Number(window.prompt(`1-Insira o primeiro número`));
+        let d = Number(window.prompt(`1-Insira o segundo número`));
+
+        let sum = a + d;
+
+        res.innerHTML = `<p>O seu número é ${sum}</p>`;
+      } else {
+        if (cod == 2) {
+          let a = Number(window.prompt(`2-Insira o primeiro número`));
+          let d = Number(window.prompt(`2-Insira o segundo número`));
+
+          let sum = a * d;
+
+          res.innerHTML = `<p>O seu número é ${sum}</p>`;
+        } else {
+          if (cod == 3) {
+            let a = Number(window.prompt(`3-Insira o primeiro número`));
+            let d = Number(window.prompt(`3-Insira o segundo número`));
+
+            let sum = a / d;
+
+            res.innerHTML = `<p>O seu número é ${sum}</p>`;
+          } else {
+            res.innerHTML = `<p>Digito inválido! Tente Novamente</p>`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
