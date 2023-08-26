@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <head>
+      <title>Sistema de Contatos</title>
+    </head>
+    <body>
+      <h1>Sistema de Contatos</h1>
+
+      <div>
+        <h2>Adicionar Contato</h2>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required /><br />
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" required /><br />
+
+        <button id="add-contact">Adicionar Contato</button>
+      </div>
+
+      <div>
+        <h2>Contatos Salvos</h2>
+        <ul id="contact-list"></ul>
+      </div>
+
+      <script>
+        const nameInput = document.getElementById("name");
+        const phoneInput = document.getElementById("phone");
+        const addContactButton = document.getElementById("add-contact");
+        const contactList = document.getElementById("contact-list");
+
+        // Função para adicionar um novo contato
+        function addContact() {
+          const name = nameInput.value;
+          const phone = phoneInput.value;
+
+          if (name.trim() !== "" && phone.trim() !== "") {
+            const contactItem = document.createElement("li");
+            contactItem.textContent = `${name}: ${phone}`;
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Excluir";
+
+            // Função para excluir um contato
+            deleteButton.addEventListener("click", () => {
+              contactList.removeChild(contactItem);
+            });
+
+            contactItem.appendChild(deleteButton);
+            contactList.appendChild(contactItem);
+
+            nameInput.value = "";
+            phoneInput.value = "";
+          } else {
+            alert("Por favor, preencha todos os campos.");
+          }
+        }
+
+        addContactButton.addEventListener("click", addContact);
+      </script>
+    </body>
+  </body>
+</html>

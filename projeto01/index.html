@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto01</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="campo">
+        <label for="nome"><strong>Nome</strong></label>
+        <input type="text" name="nome" id="nome" required />
+      </div>
+
+      <div class="campo">
+        <label for="tel"><strong>Telefone</strong></label>
+        <input type="tel" name="telefone" id="tel" required />
+      </div>
+
+      <button type="button" id="botao" onclick="addContact()">Inserir</button>
+    </form>
+
+    <div class="list">
+      <table>
+        <thead>
+          <tr id="tags">
+            <td><strong>#</strong></td>
+            <td><strong>Nome</strong></td>
+            <td><strong>Telefone</strong></td>
+            <td><strong>Ação</strong></td>
+          </tr>
+        </thead>
+        <tbody id="table">
+          <tr class="contatos">
+            <td><strong>1</strong></td>
+            <td><strong>Nicholas</strong></td>
+            <td><strong>(00)123456789</strong></td>
+            <td><button class="Delete">Delete</button></td>
+          </tr>
+
+          <tr class="contatos">
+            <td><strong>2</strong></td>
+            <td><strong>Salochin</strong></td>
+            <td><strong>(99)876543210</strong></td>
+            <td><button class="Delete">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
