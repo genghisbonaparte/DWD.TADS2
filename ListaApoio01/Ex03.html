@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio03</title>
+  </head>
+  <body>
+    <h1>Tabuada</h1>
+
+    <h3 id="result"></h3>
+
+    <script>
+      const n = Number(window.prompt("Insira um numero"));
+      const mult = [];
+
+      for (let i = 0; i <= 10; i++) {
+        let m = n * i;
+        mult.push(m);
+      }
+
+      let res = document.getElementById("result");
+      res.innerHTML = `<p>Os multiplos de ${n} são: <br> ${mult[0]} <br> ${mult[1]} <br> ${mult[2]} <br> ${mult[3]} <br> ${mult[4]} <br> ${mult[5]} <br> ${mult[6]} <br> ${mult[7]} <br> ${mult[8]} <br> ${mult[9]} <br> ${mult[10]}</p>`;
+    </script>
+  </body>
+</html>

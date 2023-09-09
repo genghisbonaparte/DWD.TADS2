@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio01</title>
+  </head>
+  <body>
+    <h1>Soma de numeros pares</h1>
+
+    <h3 id="result"></h3>
+
+    <script>
+      const n = Number(window.prompt(`Escreva quantos pares queres somar`));
+      const partner = [];
+
+      for (let i = 0; i <= n; i++) {
+        if (i % 2 === 0) {
+          partner.push(i);
+        } else {
+          continue;
+        }
+      }
+
+      let soma = 0;
+
+      partner.forEach((item) => (soma += item));
+
+      // document.write("O seu resultado é  " + soma);
+
+      let res = document.getElementById("result");
+      res.innerHTML = `<p>O seu numero é ${soma}</p>`;
+    </script>
+  </body>
+</html>

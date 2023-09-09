@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numeros pares e impares</title>
+  </head>
+  <body>
+    <h1>Pares e Impares</h1>
+
+    <h3 id="result"></h3>
+
+    <script>
+      const lista = [];
+      const d = Number(window.prompt("Insira o tamanho de sua lista"));
+
+      for (i = 0; i < d; i++) {
+        let n = Number(window.prompt("Insira o numero"));
+        lista.push(n);
+      }
+
+      let contador0 = 0;
+
+      let contador1 = 0;
+
+      lista.forEach((item) => {
+        if (item % 2 === 0) {
+          contador0++;
+        } else {
+          contador1++;
+        }
+      });
+
+      let res = document.getElementById("result");
+      res.innerHTML = `<p> Voce digitou ${contador0} numeros pares e ${contador1} numeros impares`;
+    </script>
+  </body>
+</html>

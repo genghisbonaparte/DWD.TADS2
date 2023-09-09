@@ -1,7 +1,13 @@
-var a = 10
-var b = '20'
-var c = false
-var d = true
+var a = 10 // inteiro
+var b = '20' // string
+var c = false // 0 - variavel booleana
+var d = true // 1
+
+
+// nome de variável apenas com letras minuculas, nada de numeros, letras maiusculas, caracteres especiais, etc, a não ser no formato "var a = bannanaMaca"
+
+// Quase nunca se usa o var
+
 
 a = 'beto' // troca de tipagem  _ objeto string
 

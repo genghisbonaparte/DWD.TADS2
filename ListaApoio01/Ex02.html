@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício2</title>
+  </head>
+  <body>
+    <h1>Sua Média</h1>
+    <h3 id="result"></h3>
+
+    <script>
+      const n = Number(window.prompt("informe o tamanho de sua sequencia"));
+      const mid = [];
+
+      for (let i = 0; i < n; i++) {
+        let m = Number(window.prompt("insira um numero")); // NÃO ESQUEÇA DE ESPECICAR CASO SEJA NUMEROOOO
+        mid.push(m);
+      }
+
+      let soma = 0;
+
+      mid.forEach((item) => (soma += item));
+
+      const media = soma / n;
+
+      let res = document.getElementById("result");
+      res.innerHTML = `<p>A média de numeros é ${media}</p>`;
+    </script>
+  </body>
+</html>
