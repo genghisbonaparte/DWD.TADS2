@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma da Lista</title>
+  </head>
+  <body>
+    <h2 for="number">Insira sua sequencia,</h2>
+
+    <br />
+
+    <input type="number" id="numero" />
+
+    <br />
+
+    <button onclick="InputNumber()">Inserir</button>
+
+    <button onclick="SumList()">Somar</button>
+
+    <h3 id="result"></h3>
+    <script>
+      const lista = [];
+      let res = document.getElementById("result");
+
+      function InputNumber() {
+        const n = document.getElementById("numero");
+        const num = parseInt(n.value);
+
+        lista.push(num);
+        n.value = "";
+      }
+
+      function SumList() {
+        let sum = 0;
+
+        lista.forEach((item) => {
+          sum += item;
+        });
+
+        res.innerHTML = `<p>A soma dos numeros da sua lista é ${sum}</p>`;
+      }
+    </script>
+  </body>
+</html>

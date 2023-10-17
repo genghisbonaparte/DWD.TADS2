@@ -31,6 +31,9 @@ function addContact() {
   atualizarContatos(listas);
 }
 
+
+
+
 function atualizarContatos(listas) {
   tabela.innerHTML += `
     <tr class="contatos">

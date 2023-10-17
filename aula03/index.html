@@ -12,7 +12,7 @@
       <li>ValueOf()</li>
       - Retorna o valor primitivo do objeto
       <li>charAt()</li>
-      - retorna uma Sting contend caracter de posição
+      - retorna uma String contend caracter de posição
       <li>concat(String, String, ..., n)</li>
       - este método retorna uma string contendo uma string + string n vezes
       <li>replace</li>
@@ -25,8 +25,10 @@
       <li>substring(ini, fim)</li>
       - retorna o resulta da conversão do objeto que o chamou o método (inicio
       até fim)
-      <li>toLowerCase</li>
-      <li>toUpperCase</li>
+      <li>toLowerCase()</li>
+      - Converte as letras de uma string em minusculas
+      <li>toUpperCase()</li>
+      - Converte as letras de uma string em maiusculas
     </ul>
 
     <h1>Arrays</h1>
@@ -53,24 +55,25 @@
     <h3 id="result"></h3>
 
     <script>
+      let res = document.getElementById("result");
       // teste do ValueOf()
       var s = new String("Gerador de campos");
       var str = s.valueOf();
 
       // charAt()
-      var str = "Instituto";
-      var carac = str.charAt(3);
+      var char = "Instituto";
+      var carac = char.charAt(3); // => "t"
 
       // concat()
 
       var str2 = "Praticando",
         str3 = "Javascript";
-      var result = str2.concat(str3);
+      var result = str2.concat(" ", str3); // => Preticando JavaScript
 
       // replace
 
       var a = "Não esqueça de estudar";
-      var res1 = a.replace("esqueça", "pare");
+      var res1 = a.replace("esqueça", "pare"); // => "Não pare de estudar"
 
       // slice
 
@@ -95,12 +98,10 @@
       // sort
 
       var vetor3 = ["d", "y", "a", "n", "h"];
-      vetor3.sort(); // result => a d h n y
-
-      let res = document.getElementById("result");
+      vetor3.reverse(); // result => a d h n y
 
       // Insira o elemento que deseja imprimir abaixo
-      res.innerHTML = `${vetor2}`;
+      res.innerHTML = `${vetor3}`;
     </script>
   </body>
 </html>

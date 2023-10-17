@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mutiplicação de Matrizes</title>
+  </head>
+  <body>
+    <h1>Multiplicação de matrizes</h1>
+
+    <label for="text">Insira o tamanho da matriz(quadrada)A</label>
+    <input type="number" id="tamanho" />
+    <button onclick="Matriz()">Criar</button>
+    <label for="text">Insira seus numeros</label>
+
+    <label for="text">Insira o tamanho da matriz(quadrada)B</label>
+    <input type="number" id="tamanho" />
+    <button onclick="Matriz()">Criar</button>
+    <label for="text">Insira seus numeros</label>
+
+    <h3 id="show"></h3>
+
+    <script>
+      const num = document.getElementById("tamanho");
+      const n = parseInt(numero.value);
+
+      function Matriz() {
+        let res = document.getElementById("show");
+
+        const matriz = [];
+
+        for (i = 0; i < n; i++) {
+          matriz[i] = [];
+
+          for (j = 0; j < n; j++) {
+            matriz[i][j] = 0;
+          }
+        }
+
+        return matriz;
+      }
+
+      // function MatrizA(){
+      //   let res = document.getElementById("numA");
+      //   const nA = document.getElementById("numberA");
+      //   let numero = parseInt(nA.value);
+
+      //   const matriz = [];
+
+      //   for (i = 0; i < n; i++) {
+      //     matriz[i] = [];
+
+      //     for (j = 0; j < n; j++) {
+      //       matriz[i][j] = numero
+      //     }
+      //   }
+
+      //   res.innerHTML = `<p>${matriz}</p>
+
+      //   `;
+
+      // }
+    </script>
+  </body>
+</html>

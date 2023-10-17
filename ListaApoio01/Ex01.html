@@ -8,28 +8,35 @@
   <body>
     <h1>Soma de numeros pares</h1>
 
+    <label for="text">Escreva quantos numeros pares queres somar</label>
+    <input type="number" id="numero" />
+    <button onclick="SomaPares()">Calcular</button>
+
     <h3 id="result"></h3>
 
     <script>
-      const n = Number(window.prompt(`Escreva quantos pares queres somar`));
-      const partner = [];
+      function SomaPares() {
+        const number = document.getElementById("numero");
+        const n = parseInt(number.value);
+        const partner = [];
 
-      for (let i = 0; i <= n; i++) {
-        if (i % 2 === 0) {
-          partner.push(i);
-        } else {
-          continue;
+        for (let i = 0; i <= n; i++) {
+          if (i % 2 === 0) {
+            partner.push(i);
+          } else {
+            continue;
+          }
         }
+
+        let soma = 0;
+
+        partner.forEach((item) => (soma += item));
+
+        // document.write("O seu resultado é  " + soma);
+
+        let res = document.getElementById("result");
+        res.innerHTML = `<p>Sua lista é ${partner}  e o seu numero é ${soma}</p>`;
       }
-
-      let soma = 0;
-
-      partner.forEach((item) => (soma += item));
-
-      // document.write("O seu resultado é  " + soma);
-
-      let res = document.getElementById("result");
-      res.innerHTML = `<p>O seu numero é ${soma}</p>`;
     </script>
   </body>
 </html>

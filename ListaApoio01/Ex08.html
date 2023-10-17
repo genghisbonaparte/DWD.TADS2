@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inversão</title>
+  </head>
+  <body>
+    <h2>Inversão de um array</h2>
+    <h2>Digite uma lista de numeros e inverteremos ela</h2>
+
+    <input type="number" id="numero" />
+    <br />
+    <button onclick="Adicionar()">ADICIONAR</button>
+    <button onclick="Escrever()">ESCREVER</button>
+    <button onclick="Inverter()">INVERTER</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      let res = document.getElementById("result");
+      const lista = [];
+
+      function Adicionar() {
+        const num = document.getElementById("numero");
+        const n = parseInt(num.value);
+
+        lista.push(n);
+        num.value = "";
+      }
+
+      function Escrever() {
+        res.innerHTML = `${lista}`;
+      }
+
+      function Inverter() {
+        lista.reverse();
+
+        res.innerHTML = `${lista}`;
+      }
+    </script>
+  </body>
+</html>

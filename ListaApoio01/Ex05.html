@@ -6,33 +6,46 @@
     <title>Numeros pares e impares</title>
   </head>
   <body>
-    <h1>Pares e Impares</h1>
+    <label for="numeros">Numeros pares e impares</label>
+    <input type="number" id="numeros" />
+    <button onclick="InserirNumero()">Inserir</button>
+
+    <button onclick="ParesImpares()">Lista</button>
 
     <h3 id="result"></h3>
 
     <script>
       const lista = [];
-      const d = Number(window.prompt("Insira o tamanho de sua lista"));
 
-      for (i = 0; i < d; i++) {
-        let n = Number(window.prompt("Insira o numero"));
-        lista.push(n);
+      function InserirNumero() {
+        const d = document.getElementById("numeros");
+        const numero = parseInt(d.value);
+
+        if (isNaN(numero)) {
+          res.innerHTML = "Por favor, insira um número válido.";
+          return;
+        }
+
+        lista.push(numero);
+        d.value = ""; // limpa a entrada de dados após a inserção
       }
 
-      let contador0 = 0;
+      function ParesImpares() {
+        let contador0 = 0;
 
-      let contador1 = 0;
+        let contador1 = 0;
 
-      lista.forEach((item) => {
-        if (item % 2 === 0) {
-          contador0++;
-        } else {
-          contador1++;
-        }
-      });
+        lista.forEach((item) => {
+          if (item % 2 === 0) {
+            contador0++;
+          } else {
+            contador1++;
+          }
+        });
 
-      let res = document.getElementById("result");
-      res.innerHTML = `<p> Voce digitou ${contador0} numeros pares e ${contador1} numeros impares`;
+        let res = document.getElementById("result");
+        res.innerHTML = `<p> Você digitou ${contador0} números pares e ${contador1} números impares`;
+      }
     </script>
   </body>
 </html>

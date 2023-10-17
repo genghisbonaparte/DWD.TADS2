@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior e Menor Elemento</title>
+  </head>
+  <body>
+    <h2>Encontrando o maior e o menor elementos em um vetor</h2>
+
+    <label for="number">Insira seus numeros</label>
+    <input type="number" id="numero" />
+
+    <br />
+    <button onclick="Inserir()">Inserir</button>
+    <button onclick="Apresentar()">Mostrar</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      let res = document.getElementById("result");
+      const lista = [];
+
+      function Inserir() {
+        const num = document.getElementById("numero");
+        const n = parseInt(num.value);
+
+        lista.push(n);
+        num.value = " ";
+      }
+
+      function Apresentar() {
+        let maior = lista[0];
+        let menor = lista[0];
+
+        for (i = 0; i <= lista.length; i++) {
+          let numero = lista[i];
+
+          if (numero > maior) {
+            maior = numero;
+          }
+
+          if (numero < menor) {
+            menor = numero;
+          }
+        }
+
+        res.innerHTML = `<p>O maior numero é ${maior} e o menor numero é ${menor}</p>`;
+      }
+    </script>
+  </body>
+</html>

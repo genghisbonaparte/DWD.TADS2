@@ -18,10 +18,12 @@
       function calcularFatorial() {
         const inputNumero = document.getElementById("numero");
         let res = document.getElementById("resultado");
+
         const numero = parseInt(inputNumero.value);
+        // 'numero' é o formato int de inputNumero, que é string
 
         if (isNaN(numero) || numero < 0) {
-          res.innerHTML = "Por favor, insira um número válido e positivo.";
+          res.innerHTML = "Por favor, insira um número inteiro e positivo.";
           return;
         } // verifica se o numero inserido é válido
 
